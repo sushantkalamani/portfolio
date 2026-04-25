@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sushantkalamani.netlify.app/sitemap.xml
