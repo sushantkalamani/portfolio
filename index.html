@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushant Kalamani — Data Engineer</title>
+    <meta name="description" content="Data Engineer building production pipelines at scale. Pivoting to ML Platform Engineering.">
+    <meta property="og:title" content="Sushant Kalamani — Data Engineer">
+    <meta property="og:description" content="Building production pipelines at scale.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <div class="loader-counter">
+                <span id="loader-number">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo" data-cursor="link">SK</a>
+        <div class="nav-links">
+            <a href="#about" data-cursor="link">About</a>
+            <a href="#experience" data-cursor="link">Experience</a>
+            <a href="#projects" data-cursor="link">Work</a>
+            <a href="#contact" data-cursor="link">Contact</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" data-cursor="link" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#about" data-cursor="link">About</a>
+            <a href="#experience" data-cursor="link">Experience</a>
+            <a href="#projects" data-cursor="link">Work</a>
+            <a href="#contact" data-cursor="link">Contact</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="hero-label reveal-text">Data Engineer &mdash; Building Toward ML Platform Engineering</p>
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner">Sushant</span></span>
+                    <span class="line"><span class="line-inner">Kalamani</span></span>
+                </h1>
+                <div class="hero-bottom">
+                    <div class="hero-tagline">
+                        <p class="reveal-text">I keep production data flowing at Plume &mdash;</p>
+                        <p class="reveal-text">Airflow, Spark, Databricks, incident response at scale.</p>
+                    </div>
+                    <div class="hero-scroll">
+                        <div class="scroll-line"></div>
+                        <span class="reveal-text">Scroll</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Marquee -->
+        <section class="marquee-section">
+            <div class="marquee">
+                <div class="marquee-inner">
+                    <span>Apache Airflow</span><span class="marquee-dot"></span>
+                    <span>Apache Spark</span><span class="marquee-dot"></span>
+                    <span>Databricks</span><span class="marquee-dot"></span>
+                    <span>Kubernetes</span><span class="marquee-dot"></span>
+                    <span>Docker</span><span class="marquee-dot"></span>
+                    <span>Python</span><span class="marquee-dot"></span>
+                    <span>Scala</span><span class="marquee-dot"></span>
+                    <span>AWS SageMaker</span><span class="marquee-dot"></span>
+                    <span>PySpark</span><span class="marquee-dot"></span>
+                    <span>SQL</span><span class="marquee-dot"></span>
+                    <span>ETL Pipelines</span><span class="marquee-dot"></span>
+                    <span>CI/CD</span><span class="marquee-dot"></span>
+                    <span>Apache Airflow</span><span class="marquee-dot"></span>
+                    <span>Apache Spark</span><span class="marquee-dot"></span>
+                    <span>Databricks</span><span class="marquee-dot"></span>
+                    <span>Kubernetes</span><span class="marquee-dot"></span>
+                    <span>Docker</span><span class="marquee-dot"></span>
+                    <span>Python</span><span class="marquee-dot"></span>
+                    <span>Scala</span><span class="marquee-dot"></span>
+                    <span>AWS SageMaker</span><span class="marquee-dot"></span>
+                    <span>PySpark</span><span class="marquee-dot"></span>
+                    <span>SQL</span><span class="marquee-dot"></span>
+                    <span>ETL Pipelines</span><span class="marquee-dot"></span>
+                    <span>CI/CD</span><span class="marquee-dot"></span>
+                </div>
+            </div>
+            <div class="marquee marquee-reverse">
+                <div class="marquee-inner">
+                    <span>PostgreSQL</span><span class="marquee-dot"></span>
+                    <span>MongoDB</span><span class="marquee-dot"></span>
+                    <span>Data Modeling</span><span class="marquee-dot"></span>
+                    <span>Incident Response</span><span class="marquee-dot"></span>
+                    <span>RCA / PIR</span><span class="marquee-dot"></span>
+                    <span>Shell Scripting</span><span class="marquee-dot"></span>
+                    <span>Git</span><span class="marquee-dot"></span>
+                    <span>Minikube</span><span class="marquee-dot"></span>
+                    <span>MySQL</span><span class="marquee-dot"></span>
+                    <span>MLflow</span><span class="marquee-dot"></span>
+                    <span>PostgreSQL</span><span class="marquee-dot"></span>
+                    <span>MongoDB</span><span class="marquee-dot"></span>
+                    <span>Data Modeling</span><span class="marquee-dot"></span>
+                    <span>Incident Response</span><span class="marquee-dot"></span>
+                    <span>RCA / PIR</span><span class="marquee-dot"></span>
+                    <span>Shell Scripting</span><span class="marquee-dot"></span>
+                    <span>Git</span><span class="marquee-dot"></span>
+                    <span>Minikube</span><span class="marquee-dot"></span>
+                    <span>MySQL</span><span class="marquee-dot"></span>
+                    <span>MLflow</span><span class="marquee-dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-label reveal-text">(About)</div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-heading">
+                            <span class="line"><span class="line-inner">I make sure data pipelines</span></span>
+                            <span class="line"><span class="line-inner">don't break at 3 AM &mdash; and</span></span>
+                            <span class="line"><span class="line-inner">when they do, I'm the one</span></span>
+                            <span class="line"><span class="line-inner">who fixes them.</span></span>
+                        </h2>
+                        <div class="about-description">
+                            <p class="reveal-text">At Plume, I build and maintain production pipelines across Airflow, Databricks, and Spark that serve millions of devices. I handle first-line incident response, triage RCAs, and build internal tooling that reduces MTTR. Currently building toward ML Platform Engineering &mdash; bridging data infrastructure with model serving, GPU orchestration, and production ML systems.</p>
+                            <p class="reveal-text about-philosophy">&ldquo;Knowing is not knowing. Using is knowing.&rdquo;</p>
+                        </div>
+                    </div>
+                    <div class="about-image-wrap">
+                        <div class="about-image reveal-image">
+                            <img src="assets/photo.png" alt="Sushant Kalamani">
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item reveal-text">
+                                <span class="stat-num">01+</span>
+                                <span class="stat-desc">Year in<br>Production</span>
+                            </div>
+                            <div class="stat-item reveal-text">
+                                <span class="stat-num">05+</span>
+                                <span class="stat-desc">Production<br>Systems</span>
+                            </div>
+                            <div class="stat-item reveal-text">
+                                <span class="stat-num">04+</span>
+                                <span class="stat-desc">Projects<br>Shipped</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <div class="section-label reveal-text">(Experience)</div>
+                <div class="experience-list">
+                    <div class="exp-item">
+                        <div class="exp-line"></div>
+                        <div class="exp-header">
+                            <div class="exp-role">
+                                <h3 class="reveal-text">Data Engineer</h3>
+                                <span class="exp-company reveal-text">Plume Design</span>
+                            </div>
+                            <span class="exp-date reveal-text">Jan 2025 &mdash; Present</span>
+                        </div>
+                        <div class="exp-details">
+                            <p class="reveal-text">Serve as first-line incident responder for the data team &mdash; triaging production failures, writing RCAs, and resolving pipeline issues across Airflow and Databricks (Spark/Scala). Reduced investigation time by building a multi-agent RCA system that pulls context from Jira, Slack, code, and docs simultaneously.</p>
+                            <p class="reveal-text">Own the full PR lifecycle for production DAGs, Spark jobs, and Databricks notebooks. Successfully led Airflow migration across two major versions (1.x &rarr; 2.x &rarr; 3.x) with zero downtime to dependent pipelines.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-line"></div>
+                        <div class="exp-header">
+                            <div class="exp-role">
+                                <h3 class="reveal-text">AI / ML Trainee</h3>
+                                <span class="exp-company reveal-text">Gradious</span>
+                            </div>
+                            <span class="exp-date reveal-text">Mar 2024 &mdash; Dec 2024</span>
+                        </div>
+                        <div class="exp-details">
+                            <p class="reveal-text">Designed and shipped end-to-end ML pipelines &mdash; from data preprocessing through model evaluation &mdash; using Pandas, NumPy, and Scikit-learn. Focused on feature engineering, experiment reproducibility, and building intuition for production-grade ML workflows.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-line"></div>
+                        <div class="exp-header">
+                            <div class="exp-role">
+                                <h3 class="reveal-text">B.Tech &mdash; ECE</h3>
+                                <span class="exp-company reveal-text">Walchand Institute of Technology</span>
+                            </div>
+                            <span class="exp-date reveal-text">2022 &mdash; 2025</span>
+                        </div>
+                        <div class="exp-details">
+                            <p class="reveal-text">8.9 CGPA. Led Smart India Hackathon 2023 team &mdash; call sentiment analysis system. IBM Data Science Specialization (10 courses, Coursera).</p>
+                        </div>
+                    </div>
+                    <div class="exp-item"><div class="exp-line"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-label reveal-text">(Selected Work)</div>
+                <div class="project-list">
+                    <a href="https://github.com/goyal-chintan/project-lumos" target="_blank" rel="noopener" class="project-row" data-cursor="project">
+                        <div class="project-line"></div>
+                        <div class="project-row-inner">
+                            <span class="project-index">01</span>
+                            <div class="project-info">
+                                <h3 class="project-name">Project Lumos</h3>
+                                <p class="project-desc">Co-built (team of 3) a production metadata management toolkit for DataHub at Plume &mdash; unified CLI for ingestion, lineage tracking, RBAC, and data quality checks across CSV, Parquet, and MongoDB sources. Open-sourced to improve data discoverability across the org.</p>
+                            </div>
+                            <div class="project-tags"><span>Python</span><span>DataHub</span><span>Open Source</span><span>Plume</span></div>
+                            <div class="project-arrow">&nearr;</div>
+                        </div>
+                    </a>
+                    <a class="project-row" data-cursor="project">
+                        <div class="project-line"></div>
+                        <div class="project-row-inner">
+                            <span class="project-index">02</span>
+                            <div class="project-info">
+                                <h3 class="project-name">Multi-Agent RCA System</h3>
+                                <p class="project-desc">Engineered a 5-agent incident investigation system that pulls context from Jira, Slack, codebase, and Confluence simultaneously &mdash; then synthesizes findings using adversarial reasoning. Reduced RCA investigation time from hours to minutes.</p>
+                            </div>
+                            <div class="project-tags"><span>Claude Code</span><span>MCP</span><span>Agentic AI</span></div>
+                            <div class="project-arrow">&nearr;</div>
+                        </div>
+                    </a>
+                    <a class="project-row" data-cursor="project">
+                        <div class="project-line"></div>
+                        <div class="project-row-inner">
+                            <span class="project-index">03</span>
+                            <div class="project-info">
+                                <h3 class="project-name">opsPilot</h3>
+                                <p class="project-desc">Hands-on Kubernetes lab &mdash; running Ollama inference on minikube with persistent storage, service networking, and ConfigMaps. Building the muscle memory for ML Platform Engineering: container orchestration, model serving, and infrastructure-as-code.</p>
+                            </div>
+                            <div class="project-tags"><span>Kubernetes</span><span>Docker</span><span>Ollama</span><span>MLOps</span></div>
+                            <div class="project-arrow">&nearr;</div>
+                        </div>
+                    </a>
+                    <a class="project-row" data-cursor="project">
+                        <div class="project-line"></div>
+                        <div class="project-row-inner">
+                            <span class="project-index">04</span>
+                            <div class="project-info">
+                                <h3 class="project-name">Restaurant Recommender</h3>
+                                <p class="project-desc">Built a hybrid recommendation engine combining collaborative filtering with content-based signals from user reviews. Focused on feature engineering and evaluation methodology &mdash; understanding the full model lifecycle end-to-end.</p>
+                            </div>
+                            <div class="project-tags"><span>ML</span><span>Python</span><span>Scikit-learn</span></div>
+                            <div class="project-arrow">&nearr;</div>
+                        </div>
+                    </a>
+                    <div class="project-row"><div class="project-line"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-label reveal-text">(Contact)</div>
+                <div class="contact-content">
+                    <h2 class="contact-heading">
+                        <span class="line"><span class="line-inner">Let's build</span></span>
+                        <span class="line"><span class="line-inner">something together</span></span>
+                    </h2>
+                    <p class="contact-sub reveal-text">Open to Data Engineering and ML Platform Engineering roles &mdash; especially teams working on pipeline infrastructure, model serving, or production ML systems.</p>
+                    <div class="contact-cta">
+                        <a href="mailto:sushantkalamani@gmail.com" class="magnetic-btn" data-cursor="link">
+                            <span class="btn-text">sushantkalamani@gmail.com</span>
+                            <span class="btn-fill"></span>
+                        </a>
+                        <div class="contact-socials">
+                            <a href="https://github.com/sushantkalamani" target="_blank" rel="noopener" class="social-link" data-cursor="link">GitHub &nearr;</a>
+                            <a href="https://www.linkedin.com/in/sushantkalamani/" target="_blank" rel="noopener" class="social-link" data-cursor="link">LinkedIn &nearr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container footer-inner">
+                <span>&copy; 2026 Sushant Kalamani</span>
+                <span>Designed & Built from scratch</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
