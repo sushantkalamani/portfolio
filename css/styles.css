@@ -214,11 +214,8 @@ button { cursor: none; }
 /* ===== Line Reveal Animation ===== */
 .line {
     display: block;
-    overflow-x: visible;
-    overflow-y: hidden;
+    clip-path: inset(-5% -5% -15% -5%);
     position: relative;
-    padding-bottom: 0.15em;
-    margin-bottom: -0.05em;
 }
 .line-inner {
     display: block;
@@ -641,52 +638,57 @@ button { cursor: none; }
     .nav-toggle { display: flex; }
 
     /* Hero */
-    .hero { min-height: 100svh; padding: 0 16px; padding-top: 100px; align-items: flex-start; }
-    .hero-title { font-size: clamp(2.4rem, 11vw, 5rem); margin-bottom: 32px; }
-    .hero-label { font-size: 0.7rem; margin-bottom: 16px; }
-    .hero-bottom { flex-direction: column; gap: 32px; }
+    .hero { min-height: auto; padding: 120px 16px 60px; align-items: flex-start; }
+    .hero-title { font-size: clamp(2.4rem, 11vw, 5rem); margin-bottom: 24px; }
+    .hero-label { font-size: 0.7rem; margin-bottom: 12px; }
+    .hero-bottom { flex-direction: column; gap: 20px; }
     .hero-scroll { display: none; }
-    .hero-tagline p { font-size: 0.9rem; }
+    .hero-tagline p { font-size: 0.9rem; line-height: 1.5; }
 
     /* Marquee */
-    .marquee-section { padding: 40px 0; }
-    .marquee-inner span { font-size: 1.1rem; padding: 0 14px; }
+    .marquee-section { padding: 24px 0; }
+    .marquee-inner span { font-size: 1rem; padding: 0 12px; }
 
     /* About */
-    .about { padding: 80px 0; }
-    .about-heading { font-size: 1.3rem; line-height: 1.5; margin-bottom: 24px; }
-    .about-description p { font-size: 0.85rem; }
+    .about { padding: 48px 0; }
+    .about-heading { font-size: 1.3rem; line-height: 1.5; margin-bottom: 20px; }
+    .about-description p { font-size: 0.85rem; margin-bottom: 12px; }
     .about-image img { aspect-ratio: 1/1; object-position: top; }
-    .about-stats { gap: 20px; }
+    .about-stats { gap: 20px; margin-top: 20px; }
+    .section-label { margin-bottom: 24px; }
 
     /* Experience */
-    .experience { padding: 80px 0; }
-    .section-label { margin-bottom: 32px; }
-    .exp-header { flex-direction: column; gap: 4px; }
+    .experience { padding: 48px 0; }
+    .exp-header { flex-direction: column; gap: 4px; padding: 20px 0 12px; }
     .exp-role h3 { font-size: 1.3rem; }
-    .exp-details p { font-size: 0.85rem; }
+    .exp-details { padding-bottom: 24px; }
+    .exp-details p { font-size: 0.85rem; margin-bottom: 8px; }
 
     /* Projects */
-    .projects { padding: 80px 0; }
-    .project-row-inner { grid-template-columns: 1fr auto; gap: 12px; padding: 24px 0; }
+    .projects { padding: 48px 0; }
+    .project-row-inner { grid-template-columns: 1fr auto; gap: 12px; padding: 20px 0; }
     .project-index { display: none; }
     .project-name { font-size: 1.2rem; }
     .project-desc { max-height: none; opacity: 1; margin-bottom: 8px; font-size: 0.8rem; }
     .project-arrow { font-size: 1.2rem; }
 
     /* Contact */
-    .contact { padding: 80px 0 60px; }
-    .contact-heading { font-size: clamp(2rem, 10vw, 4rem); }
-    .contact-sub { font-size: 0.85rem; margin-bottom: 32px; }
+    .contact { padding: 48px 0 40px; }
+    .contact-heading { font-size: clamp(2rem, 10vw, 4rem); margin-bottom: 20px; }
+    .contact-sub { font-size: 0.85rem; margin-bottom: 24px; }
     .magnetic-btn { padding: 16px 32px; font-size: 0.8rem; }
 
     .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
 
 @media (max-width: 480px) {
-    .hero { padding: 0 12px; padding-top: 90px; }
+    .hero { padding: 100px 12px 48px; }
     .hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
-    .about-content { gap: 32px; }
+    .about { padding: 36px 0; }
+    .experience { padding: 36px 0; }
+    .projects { padding: 36px 0; }
+    .contact { padding: 36px 0 32px; }
+    .about-content { gap: 24px; }
     .about-stats { flex-direction: row; gap: 16px; }
     .stat-num { font-size: 1.2rem; }
     .stat-desc { font-size: 0.65rem; }
@@ -696,7 +698,7 @@ button { cursor: none; }
 }
 
 @media (max-width: 360px) {
-    .hero { padding: 0 10px; padding-top: 80px; }
+    .hero { padding: 90px 10px 40px; }
     .hero-title { font-size: 1.8rem; }
     .about-heading { font-size: 1.1rem; }
     .exp-role h3 { font-size: 1.1rem; }
