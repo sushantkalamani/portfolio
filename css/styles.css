@@ -216,6 +216,7 @@ button { cursor: none; }
     display: block;
     overflow: hidden;
     position: relative;
+    padding-bottom: 0.08em;
 }
 .line-inner {
     display: block;
