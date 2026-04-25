@@ -2,35 +2,46 @@
     'use strict';
 
     // =========================================
-    // PRELOADER
+    // PRELOADER (skip on repeat visits)
     // =========================================
     var loader = document.getElementById('loader');
     var loaderNumber = document.getElementById('loader-number');
     var loaderLine = loader.querySelector('.loader-line');
-    var progress = { val: 0 };
+    var hasVisited = sessionStorage.getItem('visited');
 
-    gsap.to(progress, {
-        val: 100,
-        duration: 2.2,
-        ease: 'power2.inOut',
-        onUpdate: function () {
-            var v = Math.round(progress.val);
-            loaderNumber.textContent = v;
-            loaderLine.style.width = v + '%';
-        },
-        onComplete: function () {
-            gsap.to(loader, {
-                yPercent: -100,
-                duration: 1,
-                ease: 'power3.inOut',
-                delay: 0.3,
-                onComplete: function () {
-                    loader.style.display = 'none';
-                    startPageAnimations();
-                }
-            });
-        }
-    });
+    function hideLoader(andThen) {
+        gsap.to(loader, {
+            yPercent: -100,
+            duration: 1,
+            ease: 'power3.inOut',
+            delay: 0.2,
+            onComplete: function () {
+                loader.style.display = 'none';
+                andThen();
+            }
+        });
+    }
+
+    if (hasVisited) {
+        loader.style.display = 'none';
+        startPageAnimations();
+    } else {
+        var progress = { val: 0 };
+        gsap.to(progress, {
+            val: 100,
+            duration: 2.2,
+            ease: 'power2.inOut',
+            onUpdate: function () {
+                var v = Math.round(progress.val);
+                loaderNumber.textContent = v;
+                loaderLine.style.width = v + '%';
+            },
+            onComplete: function () {
+                sessionStorage.setItem('visited', '1');
+                hideLoader(startPageAnimations);
+            }
+        });
+    }
 
     // =========================================
     // SMOOTH SCROLL (LENIS)
@@ -47,6 +58,21 @@
         gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
         gsap.ticker.lagSmoothing(0);
     }
+
+    // Smooth scroll for anchor links (works with Lenis)
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                if (lenis) {
+                    lenis.scrollTo(target, { offset: -80 });
+                } else {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
 
     // =========================================
     // CUSTOM CURSOR
@@ -92,6 +118,7 @@
     var nav = document.getElementById('nav');
     var navToggle = document.getElementById('nav-toggle');
     var mobileMenu = document.getElementById('mobile-menu');
+    var navAnchors = document.querySelectorAll('.nav-links a, .mobile-menu-links a');
 
     if (navToggle && mobileMenu) {
         navToggle.addEventListener('click', function () {
@@ -105,6 +132,26 @@
             });
         });
     }
+
+    // Active nav link highlighting on scroll
+    var sections = document.querySelectorAll('section[id]');
+    function updateActiveNav() {
+        var scrollY = window.scrollY + 150;
+        sections.forEach(function (section) {
+            var top = section.offsetTop;
+            var height = section.offsetHeight;
+            var id = section.getAttribute('id');
+            if (scrollY >= top && scrollY < top + height) {
+                navAnchors.forEach(function (a) {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === '#' + id) {
+                        a.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
 
     // =========================================
     // PAGE ANIMATIONS (after preloader)
@@ -301,6 +348,18 @@
         btn.addEventListener('mouseleave', function () {
             gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
         });
+    });
+
+    // =========================================
+    // BACK TO TOP (logo click)
+    // =========================================
+    document.querySelector('.nav-logo').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (lenis) {
+            lenis.scrollTo(0);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     });
 
 })();
