@@ -214,7 +214,8 @@ button { cursor: none; }
 /* ===== Line Reveal Animation ===== */
 .line {
     display: block;
-    overflow: hidden;
+    overflow-x: visible;
+    overflow-y: hidden;
     position: relative;
     padding-bottom: 0.15em;
     margin-bottom: -0.05em;
@@ -640,8 +641,8 @@ button { cursor: none; }
     .nav-toggle { display: flex; }
 
     /* Hero */
-    .hero { min-height: 100svh; padding-top: 100px; align-items: flex-start; }
-    .hero-title { font-size: clamp(2.8rem, 14vw, 6rem); margin-bottom: 32px; }
+    .hero { min-height: 100svh; padding: 0 16px; padding-top: 100px; align-items: flex-start; }
+    .hero-title { font-size: clamp(2.4rem, 11vw, 5rem); margin-bottom: 32px; }
     .hero-label { font-size: 0.7rem; margin-bottom: 16px; }
     .hero-bottom { flex-direction: column; gap: 32px; }
     .hero-scroll { display: none; }
@@ -683,7 +684,8 @@ button { cursor: none; }
 }
 
 @media (max-width: 480px) {
-    .hero-title { font-size: clamp(2.4rem, 16vw, 4rem); }
+    .hero { padding: 0 12px; padding-top: 90px; }
+    .hero-title { font-size: clamp(2rem, 10vw, 3.5rem); }
     .about-content { gap: 32px; }
     .about-stats { flex-direction: row; gap: 16px; }
     .stat-num { font-size: 1.2rem; }
@@ -694,7 +696,8 @@ button { cursor: none; }
 }
 
 @media (max-width: 360px) {
-    .hero-title { font-size: 2.2rem; }
+    .hero { padding: 0 10px; padding-top: 80px; }
+    .hero-title { font-size: 1.8rem; }
     .about-heading { font-size: 1.1rem; }
     .exp-role h3 { font-size: 1.1rem; }
     .project-name { font-size: 1rem; }
